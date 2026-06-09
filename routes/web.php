@@ -1,0 +1,34 @@
+<?php
+
+use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\Register;
+use App\Http\Controllers\Auth\Login;
+use App\Http\Controllers\Auth\Logout;
+
+Route::get('/', [ChirpController::class, 'index']);
+
+Route::resource('chirps', ChirpController::class)
+    ->only(['store', 'edit', 'update', 'destroy']);
+
+// Registration routes
+Route::view('/register', 'auth.register')
+->middleware('guest')
+->name('register');
+Route::post('/register', Register::class)
+->middleware('guest');
+
+// Login routes
+Route::view('/login', 'auth.login')
+->middleware('guest')
+->name('login');
+Route::post('/login', Login::class)
+->middleware('guest');
+// Logout route
+Route::post('/logout', Logout::class)
+->middleware('auth')
+->name('logout');
+
+Route::view('/sobre', 'sobre');
+Route::fallback([ChirpController::class, 'fallback']);
