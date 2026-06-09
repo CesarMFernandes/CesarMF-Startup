@@ -13,7 +13,5 @@
                 <li>Logout</li>
                 <li>Rota Fallback</li>
             </ul><br>
-            <p>Este vídeo mostra o site em funcionamento:</p>
-            https://www.youtube.com/watch?v=TrTwJAWluMI
-            
-            Projeto Extra: https://github.com/CesarMFernandes/laravelCesarMFPainelSolar
+            <p>Este vídeo mostra o site em funcionamento: https://www.youtube.com/watch?v=TrTwJAWluMI</p>
+            <p>Projeto Extra: https://github.com/CesarMFernandes/laravelCesarMFPainelSolar</p>
